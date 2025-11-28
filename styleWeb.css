@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav > ul > li{
+    float: left;
+    list-style: none;
+    
+}
+div.background {
+    height: 900px;
+
+   
+    background-image:
+        linear-gradient(to right,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.5) 40%,
+        rgba(0,0,0,0.5) 60%,
+        rgba(0,0,0,0) 100%
+        ),
+        url("minecraftIntro-background.jpg");
+    
+    background-size: 100% 100%, auto;
+
+    background-position: center;
+}
+
+ul li a {
+    color: white;
+    padding: 0 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+ul li a:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+.navbar {
+    background-image: url("grassBlock.jpg");
+    background-repeat: repeat-x;
+    background-size: 150px auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
