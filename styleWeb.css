@@ -22,6 +22,9 @@ nav > ul > li{
 
     background-position: center;
 }
+.font{
+    font-family: sans-serif;
+}
 
 ul li a {
     color: white;
@@ -39,8 +42,6 @@ ul li a {
 
 ul li a:hover{
     background-color: rgba(0, 0, 0, 0.2);
-    
-    
 }
 
 
@@ -54,7 +55,6 @@ ul li a:hover{
     
     height: 100px;
     display: flex;
-
   
     position: relative;
 }
@@ -73,9 +73,19 @@ ul li a:hover{
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.link{
-    font-family: sans-serif;
+a{
+    text-decoration: none;
 }
+
+
+p > a :hover{
+  color: #1c451c;
+}
+p > a:visited{
+    color: #5372c5;
+}
+
 .link:hover{
     
 }
+. 
