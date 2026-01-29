@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>The Mobs</title>
+
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="mobs.css">
+    <script src="mobs.js" defer></script>
 </head>
+
 <body>
-    <p> test </p>
+<nav class="navbar">
+    <ul>
+        <li> <a href = "minecraft.html"> Main page </a>  </li>
+        <li> <a href = "items.html"> The Items</a> </li>
+        <li> <a href = "mobs.html"> <u> The Mobs</u> </a> </li>
+        <li> <a href= "crafting.html"> Crafting </a></li>
+    </ul>
+</nav>
+
+<div class="background">
+
+    <div class="selectorsGrid">
+
+        <!-- HOSTILE -->
+        <div class="selector">
+            <h1 class="header hostile">Hostile Mobs</h1>
+            <ul class="list">
+                <li data-mob="blaze">Blaze</li>
+                <li data-mob="creeper">Creeper</li>
+                <li data-mob="elder-guardian">Elder Guardian</li>
+                <li data-mob="endermite">Endermite</li>
+                <li data-mob="evoker">Evoker</li>
+                <li data-mob="ghast">Ghast</li>
+                <li data-mob="guardian">Guardian</li>
+                <li data-mob="husk">Husk</li>
+                <li data-mob="magma-cube">Magma Cube</li>
+                <li data-mob="pillager">Pillager</li>
+                <li data-mob="ravager">Ravager</li>
+                <li data-mob="silverfish">Silverfish</li>
+                <li data-mob="skeleton">Skeleton</li>
+                <li data-mob="slime">Slime</li>
+                <li data-mob="stray">Stray</li>
+                <li data-mob="vindicator">Vindicator</li>
+                <li data-mob="witch">Witch</li>
+                <li data-mob="wither-skeleton">Wither Skeleton</li>
+            </ul>
+        </div>
+
+        <!-- PASSIVE -->
+        <div class="selector">
+            <h1 class="header passive">Passive Mobs</h1>
+            <ul class="list">
+                <li data-mob="bat">Bat</li>
+                <li data-mob="rabbit">Rabbit</li>
+                <li data-mob="chicken">Chicken</li>
+                <li data-mob="cod">Cod</li>
+                <li data-mob="cow">Cow</li>
+                <li data-mob="donkey">Donkey</li>
+                <li data-mob="ocelot">Ocelot</li>
+                <li data-mob="villager">Villager</li>
+                <li data-mob="mooshroom">Mooshroom</li>
+                <li data-mob="parrot">Parrot</li>
+                <li data-mob="salmon">Salmon</li>
+                <li data-mob="snow-golem">Snow Golem</li>
+                <li data-mob="squid">Squid</li>
+                <li data-mob="cat">Cat</li>
+                <li data-mob="pig">Pig</li>
+                <li data-mob="wandering-trader">Wandering Trader</li>
+                <li data-mob="horse">Horse</li>
+                <li data-mob="sheep">Sheep</li>
+            </ul>
+        </div>
+
+        <!-- NEUTRAL -->
+        <div class="selector">
+            <h1 class="header neutral">Neutral Mobs</h1>
+            <ul class="list">
+                <li data-mob="cave-spider">Cave Spider</li>
+                <li data-mob="enderman">Enderman</li>
+                <li data-mob="iron-golem">Iron Golem</li>
+                <li data-mob="spider">Spider</li>
+                <li data-mob="zombified-piglin">Zombified Piglin</li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <div class="bossSection">
+        <div class="selector boss">
+            <h1 class="header bossHeader">Boss Mobs</h1>
+            <ul class="list bossList">
+                <li data-mob="ender-dragon">Ender Dragon</li>
+                <li data-mob="wither">Wither</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div id="infoPanel" class="infoCard"></div>
+
 </body>
 </html>

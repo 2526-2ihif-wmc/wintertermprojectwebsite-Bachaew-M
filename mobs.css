@@ -1,0 +1,260 @@
+﻿body {
+    background: radial-gradient(circle at 50% 20%, #1a1a1a 0%, #000 70%);
+    overflow-x: hidden;
+}
+
+/* Background glow layer */
+.background {
+    position: relative;
+    min-height: 100vh;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 1%,
+        rgba(51, 209, 30, 0.7) 50%,
+        rgba(0, 0, 0, 1) 98%
+    );
+    filter: blur(60px);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* GRID LAYOUT */
+.selectorsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 3rem;
+
+    padding: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Selector card */
+.selector {
+    background: rgba(25, 25, 25, 0.88);
+    border-radius: 14px;
+    padding: 1.6rem;
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 18px 45px rgba(0,0,0,0.65);
+
+    backdrop-filter: blur(6px);
+}
+
+/* Headers */
+.header {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.header.hostile {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255,107,107,0.6);
+}
+
+.header.passive {
+    color: #7cff6b;
+    text-shadow: 0 0 10px rgba(124,255,107,0.6);
+}
+
+.header.neutral {
+    color: #ffd36b;
+    text-shadow: 0 0 10px rgba(255,211,107,0.6);
+}
+
+/* List styling */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+
+.list > li {
+    font-size: 18px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.list > li:hover {
+    background: rgba(51, 209, 30, 0.15);
+    transform: translateX(6px);
+    color: #7CFF6B;
+}
+
+/* Boss section */
+.bossSection {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.selector.boss {
+    width: 60%;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.bossHeader {
+    font-size: 32px;
+    color: #ff3c3c;
+    text-shadow: 0 0 14px rgba(255,60,60,0.8);
+}
+
+/* INFO CARD */
+.infoCard {
+    position: absolute;
+    z-index: 9999;
+
+    min-width: 240px;
+    max-width: 320px;
+    min-height: 160px;
+
+    padding: 14px;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+
+    background: black;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+}
+
+/* Overlay */
+.infoCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.infoCard * {
+    position: relative;
+    z-index: 1;
+}
+
+.infoCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* BOSS INFO CARD */
+.infoCard.bossCard {
+    max-width: 420px;
+    min-height: 260px;
+    padding: 18px;
+
+    border-radius: 14px;
+    border: 2px solid rgba(255, 60, 60, 0.6);
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 0 25px rgba(255, 0, 0, 0.6),
+        0 0 60px rgba(255, 0, 0, 0.3);
+    
+}
+.infoCard.bossCard::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.85)
+    );
+}
+
+.infoCard.bossCard h2 {
+    font-size: 26px;
+    color: #ff3c3c;
+    text-align: center;
+    text-shadow: 0 0 12px red, 0 0 25px rgba(255,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+
+.infoCard.bossCard li {
+    font-weight: bold;
+    color: #ffdede;
+}
+
+
+
+/* Mob backgrounds */ 
+/*HOSTILE*/ 
+.infoCard.blaze { background-image: url("images/mobs/hostile/Blaze_JE2.gif"); } 
+.infoCard.creeper { background-image: url("images/mobs/hostile/Creeper_JE3_BE1.png"); } 
+.infoCard.elder-guardian { background-image: url("images/mobs/hostile/Elder_Guardian_JE2_BE2.gif"); } 
+.infoCard.endermite { background-image: url("images/mobs/hostile/Endermite.gif"); } 
+.infoCard.evoker { background-image: url("images/mobs/hostile/Evoker_JE3.png"); } 
+.infoCard.ghast { background-image: url("images/mobs/hostile/Ghast_JE3_BE3.gif"); } 
+.infoCard.guardian { background-image: url("images/mobs/hostile/Guardian_JE2_BE2.gif"); } 
+.infoCard.husk { background-image: url("images/mobs/hostile/Husk_JE2_BE2.png"); } 
+.infoCard.magma-cube { background-image: url("images/mobs/hostile/Magma_Cube_JE2_BE2.png"); } 
+.infoCard.pillager { background-image: url("images/mobs/hostile/Pillager_JE3.png"); } 
+.infoCard.ravager { background-image: url("images/mobs/hostile/Ravager_JE1.png"); } 
+.infoCard.silverfish { background-image: url("images/mobs/hostile/Silverfish_JE1_BE1.gif"); } 
+.infoCard.skeleton { background-image: url("images/mobs/hostile/Skeleton_JE6_BE4.png"); } 
+.infoCard.slime { background-image: url("images/mobs/hostile/Slime_JE3_BE2.png"); } 
+.infoCard.stray { background-image: url("images/mobs/hostile/Stray_JE2_BE4.png"); } 
+.infoCard.vindicator { background-image: url("images/mobs/hostile/Vindicator_JE4.png"); } 
+.infoCard.witch { background-image: url("images/mobs/hostile/Witch_JE3.png"); } 
+.infoCard.wither-skeleton { background-image: url("images/mobs/hostile/Wither_Skeleton_JE4_BE3.png"); } 
+.infoCard.zombie { background-image: url("images/mobs/hostile/Zombie_JE3_BE2.png"); } 
+/*PASSIVE*/ 
+.infoCard.bat {background-image: url("images/mobs/passive/Bat_JE4_BE3.gif");} 
+.infoCard.cat {background-image: url("images/mobs/passive/Cat_with_Red_Collar.png");} 
+.infoCard.chicken {background-image: url("images/mobs/passive/Chicken_JE2_BE2.png");} 
+.infoCard.cod {background-image: url("images/mobs/passive/Cod.gif");} 
+.infoCard.cow {background-image: url("images/mobs/passive/Cow_JE7_BE4.png");} 
+.infoCard.donkey {background-image: url("images/mobs/passive/Donkey_JE5.png");} 
+.infoCard.horse {background-image: url("images/mobs/passive/Horse.png");} 
+.infoCard.mooshroom {background-image: url("images/mobs/passive/Mooshroom_JE5_BE3.png");} 
+.infoCard.ocelot {background-image: url("images/mobs/passive/Ocelot_JE2_BE2.png");} 
+.infoCard.parrot {background-image: url("images/mobs/passive/Parrot_JE1_BE1.png");} 
+.infoCard.pig {background-image: url("images/mobs/passive/Pig_JE4_BE2.png");}
+.infoCard.rabbit {background-image: url("images/mobs/passive/Rabbit_JE2_BE2.png");} 
+.infoCard.salmon {background-image: url("images/mobs/passive/Salmon.gif");}
+.infoCard.sheep {background-image: url("images/mobs/passive/Sheep_JE4_BE7.png");}
+.infoCard.snow-golem {background-image: url("images/mobs/passive/Snow_Golem_JE2_BE2.png");} 
+.infoCard.squid {background-image: url("images/mobs/passive/Squid_JE2_BE2.gif");} 
+.infoCard.villager {background-image: url("images/mobs/passive/Villager_Base_JE2.png");} 
+.infoCard.wandering-trader {background-image: url("images/mobs/passive/Wandering_Trader_JE1_BE1.png");}
+/*NEUTRAL*/
+.infoCard.cave-spider {background-image: url("images/mobs/neutral/Cave_Spider_JE3_BE3.png");}
+.infoCard.enderman {background-image: url("images/mobs/neutral/Enderman_JE3_BE1.png");}
+.infoCard.iron-golem{background-image: url("images/mobs/neutral/Iron_Golem_JE2_BE2.png");}
+.infoCard.spider{background-image: url("images/mobs/neutral/Spider_JE5_BE4.png");}
+.infoCard.zombified-piglin{background-image: url("images/mobs/neutral/Zombified_Piglin_JE9.png");}
+/*BOSSES*/
+.infoCard.bossCard.ender-dragon{background-image:url("images/mobs/boss/Ender_Dragon.gif");}
+.infoCard.bossCard.wither{background-image:url("images/mobs/boss/Wither_JE2_BE2.png");}

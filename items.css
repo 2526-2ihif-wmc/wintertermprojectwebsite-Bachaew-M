@@ -1,0 +1,119 @@
+﻿
+.background {
+    position: relative;
+    min-height: 200vh;
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5) 1%, rgb(125, 134, 193) 50%, rgba(0,0,0,1) 98%);
+    
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.pageTitle {
+    text-align: center;
+    font-size: 42px;
+    margin: 40px 0 20px;
+    color: #fff;
+    text-shadow: 0 0 15px #7da3ff;
+}
+
+.itemsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 2rem 4rem 4rem;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.itemCard {
+    position: relative;
+    overflow: hidden; /* crops image*/
+
+    height: 220px;
+    border-radius: 14px;
+    padding: 18px;
+
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+
+    color: white;
+}
+.itemCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    transform: scale(1.2);
+    z-index: 0;
+}
+.itemCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+.itemCard * {
+    position: relative;
+    z-index: 2;
+}
+
+.itemCard.crafting-table:hover{
+    cursor: pointer;
+}
+.itemCard.arrow::before{ background-image:url("images/items/Arrow_(item)_JE1_BE1.png");}
+.itemCard.blaze-powder::before {background-image: url("images/items/Blaze_Powder_JE2_BE1.png");}
+.itemCard.blaze-rod::before {background-image: url("images/items/Blaze_Rod_JE1_BE1.png");}
+.itemCard.bone::before {background-image: url("images/items/Bone_JE3_BE2.png");}
+.itemCard.crafting-table::before {
+    background-image: url("images/items/Crafting_Table_JE4_BE3.png");
+}
+.itemCard.dirt::before {background-image: url("images/items/Dirt_JE2_BE2.png");}
+.itemCard.emerald::before {background-image: url("images/items/Emerald_JE3_BE3.png");}
+.itemCard.ender-pearl::before {background-image: url("images/items/Ender_Pearl_JE3_BE2.png");}
+.itemCard.feather::before {background-image: url("images/items/Feather_JE3_BE2.png");}
+.itemCard.ghast-tear::before {background-image: url("images/items/Ghast_Tear_JE2_BE2.png");}
+.itemCard.glass::before {background-image: url("images/items/Glass_JE4_BE2.png");}
+.itemCard.gunpowder::before {background-image: url("images/items/Gunpowder_JE2_BE2.png");}
+.itemCard.ink-sac::before {background-image: url("images/items/Ink_Sac_JE2_BE2.png");}
+.itemCard.iron-ingot::before {background-image: url("images/items/Iron_Ingot_JE3_BE2.png");}
+.itemCard.leather::before {background-image: url("images/items/Leather_JE2_BE2.png");}
+.itemCard.magma-cream::before {background-image: url("images/items/Magma_Cream_JE3_BE2.png");}
+.itemCard.nether-star::before {background-image: url("images/items/Nether_Star.gif");}
+.itemCard.oak-log::before {background-image: url("images/items/Oak_Log_(UD)_JE8_BE3.png");}
+.itemCard.prismarine-shard::before {background-image: url("images/items/Prismarine_Shard_JE2_BE2.png");}
+.itemCard.raw-beef::before {background-image: url("images/items/Raw_Beef_JE4_BE3.png");}
+.itemCard.slimeball::before {background-image: url("images/items/Slimeball_JE2_BE2.png");}
+.itemCard.sponge::before {background-image: url("images/items/Sponge_JE3_BE3.png");}
+.itemCard.stone::before {background-image: url("images/items/Stone_JE6.png");}
+.itemCard.string::before {background-image: url("images/items/String_JE2_BE2.png");}
+.itemCard.totem::before {background-image: url("images/items/Totem_of_Undying_JE2_BE2.png");}
+.itemCard.white-wool::before {background-image: url("images/items/White_Wool_JE2_BE2.png");}
+
+
+.itemCard h2 {
+    margin-bottom: 8px;
+    color: #7da3ff;
+}
+
+.itemCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px #7da3ff;
+}
+
+a{
+    text-decoration: none;
+}

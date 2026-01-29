@@ -1,0 +1,45 @@
+﻿.navbar {
+
+    background-image: url("images/mainpage/grassBlock.jpg");
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+
+    background-size: 130px auto;
+
+    height: 100px;
+
+}
+ul li a { /* Meant for navbar looks*/
+    color: white;
+    padding: 0 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+
+    border: solid 1px black;
+}
+nav > ul {
+    display: flex;
+}
+
+ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+.background{
+    position: relative;
+    height: 1000px;
+    z-index: 0;
+}
