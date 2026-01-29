@@ -1,0 +1,41 @@
+-Navbar Background change
+-Added border to Items in Navbar
+-Added comments in CSS for less complicated reading
+-HTML Navbar Changes -> Underlines current location
+-Found reason for the links "the items" and "the mobs" to not highlight if hovered
+-Made specific css files for specific html files
+-Found out that float is unnecessary for the navbar and very annoying
+
+In Items.css
+-Added background
+-Added full items page layout
+-Styled item cards
+-Added hover animation to item cards
+-Added glow effect on hover
+-Designed page title with highlight + shadow
+-Used backdrop blur to match mobs page style
+-Added consistent color theme with blue highlights
+-Added images to fit in the item cards as background 
+-Made the crafting-table clickable sending it to the Crafting.html
+
+In Mobs.css
+-Added background
+-Added lists with each of their own property
+-Added infoCards for lists
+-Added bottom-borders for each own "li" element
+-Added image...
+-Added InfoCards for multiple Mobs
+-Added the scroll for a list
+-My Idea didn't work for hover and I had to rely on AI (Using Javascript)
+-Changes like list visibility of hover being replaced by Javascript etc.
+-Added decorations with each of their own uniqueness of color, text-shadow, etc.
+-Added bossCards for the infoCards
+
+In Mussa's Brain
+-Making the infoCard have the background of an image was a mistake (in mobs.css)
+-Forgot to add some changes in the Changelog
+
+In Crafting.html
+-
+
+

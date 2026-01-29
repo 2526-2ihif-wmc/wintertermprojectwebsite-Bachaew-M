@@ -1,0 +1,57 @@
+
+
+
+.background {
+    height: 900px;
+    position: relative;
+    background-image:
+        linear-gradient(to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.5) 40%,
+        rgba(0,0,0,0.5) 60%,
+        rgba(0,0,0,0.5) 100%
+        ),
+        url("images/mainpage/minecraftIntro-background.jpg");
+    
+    background-size: 100% 100%, auto;
+
+    background-position: center;
+}
+
+
+
+/*TEXT OF GENERAL*/
+
+
+.alignment{ /* Meant for the general text */
+        
+        padding : 15rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+}
+
+.box-background{
+    
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+p{
+    font-size: 1.1rem;
+}
+
+p > a{
+    text-decoration: none;
+    color: #633434;
+}
+
+p > a :hover{
+  color: #1c451c;
+}
+
+p > a:visited{
+    color: #5372c5;
+}
+/**/
